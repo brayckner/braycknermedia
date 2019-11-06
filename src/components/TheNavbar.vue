@@ -1,25 +1,10 @@
 <template lang="pug">
   div.shadow-md.px-10.py-8.h-24.bg-white
     div.flex.justify-between
-      div.flex.flex-col.leading-tight
-        div.flex.cursor-pointer
-          div
-            svg.w-6.h-6(xmlns='http://www.w3.org/2000/svg', width='414.988', height='493.329', viewbox='0 0 414.988 493.329')
-              path#Rectangle_Copy_8(data-name='Rectangle Copy 8', d='M0,0,239.663,2.573l10.363,36.8-52.18,12.641-48.29,1.352L73.063,51.6,18.321,40.377Z', transform='matrix(0.848, -0.53, 0.53, 0.848, 174.674, 132.493)')
-              g#Logo_V2_Copy_2(data-name='Logo V2 Copy 2', transform='translate(0 33.073)')
-                path#Rectangle(d='M0,0,196.37,121.452V459.938L33.821,384.48Z', transform='translate(0 0)')
-                g#New_Logo_V1(data-name='New Logo V1', transform='translate(407.573 460.256) rotate(180)')
-                  path#Rectangle_Copy(data-name='Rectangle Copy', d='M196.37,0,0,121.135v338.8L162.549,384.48Z', transform='translate(196.37 459.938) rotate(180)')
-                  path#Rectangle_Copy_6(data-name='Rectangle Copy 6', d='M59.4,32.61.57,0,0,101.97l63.792,65.971Z', transform='matrix(0.485, 0.875, -0.875, 0.485, 196.401, 190.092)', fill='#fff')
-                path#Rectangle_Copy_4(data-name='Rectangle Copy 4', d='M4.392,32.61,63.222,0l.57,101.97L0,167.942Z', transform='matrix(-0.485, 0.875, -0.875, -0.485, 228.034, 213.652)', fill='#fff')
-                path#Union_1(data-name='Union 1', d='M130.4,66.741,246.992,0,220.149,84.9,129.688,144ZM26.577,84.757,0,0,116.037,66.431v77.254Z', transform='translate(80.643 253.683)', fill='#fff')
-
-          h1
-            span.text-lg.uppercase.font-semibold brayckner
-            span.text-lg.uppercase.text-gray-500 media
-
+      div.flex.flex-col
+        g-image.w-64(src="../assets/images/logo.png" immediate="true")
         div.flex.justify-center
-          h2.text-xs.font-medium.text-gray-500 |Atlanta, GA|
+          g-image.w-20(src="../assets/images/below_logo.png" immediate="true")
 
       div.cursor-pointer(@click="toggleMenu()")
         svg.h-8.w-8(xmlns='http://www.w3.org/2000/svg', width='41', height='24.6', viewbox='0 0 41 24.6')
