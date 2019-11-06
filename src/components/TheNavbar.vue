@@ -45,7 +45,7 @@
 export default {
   data () {
     return {
-      isMenuOpen: true
+      isMenuOpen: false
     }
   },
   methods: {

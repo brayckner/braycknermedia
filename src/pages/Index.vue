@@ -22,7 +22,7 @@
           img.mt-6( width='342' height='243.8' src="../assets/images/undraw_mobile_prototyping.png")
 
       div.flex.justify-center.mb-8
-        button.font-bold.text-xl.rounded-full.shadow-lg.w-48.h-12.bg-white Get Started
+        button.font-bold.text-xl.rounded-full.shadow-lg.w-48.h-12.bg-whiteGet Started
 
     div#development.flex.flex-col.bg-brown-500.px-10
       div.flex.justify-center.mb-20

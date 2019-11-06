@@ -5,6 +5,13 @@ module.exports = {
     { use: 'gridsome-plugin-pug' },
     { use: 'gridsome-plugin-tailwindcss' },
     {
+      use: 'gridsome-plugin-gtm',
+      options: {
+        id: 'GTM-TXV7S5P',
+        enabled: true
+      }
+    },
+    {
       use: '@gridsome/plugin-sitemap',
       options: {
         // cacheTime: 600000,
