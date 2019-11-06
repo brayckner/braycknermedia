@@ -7,10 +7,10 @@
       div.flex.flex-col
 
         input(type='hidden', name='form-name', value='contact')
-        p(hidden='')
-          label
-            | Don&rsquo;t fill this out:
-            input(name='bot-field')
+          p(hidden='')
+            label
+              | Don&rsquo;t fill this out:
+              input(name='bot-field')
 
         label.text-lg.font-semibold(for="services") Tell us what you are interested in:
         select#services.rounded-lg.h-16.w-full.shadow-lg.mt-2.bg-white.p-5(required)
