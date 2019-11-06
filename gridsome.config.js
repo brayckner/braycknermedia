@@ -1,13 +1,21 @@
-// This is where project configuration and plugin options are located. 
-// Learn more: https://gridsome.org/docs/config
-
-// Changes here require a server restart.
-// To restart press CTRL + C in terminal and run `gridsome develop`
-
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: 'Brayckner Media',
+  siteUrl: 'https://braycknermedia.com',
   plugins: [
     { use: 'gridsome-plugin-pug' },
-    { use: 'gridsome-plugin-tailwindcss' }
+    { use: 'gridsome-plugin-tailwindcss' },
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        // cacheTime: 600000,
+        // exclude: [],
+        // config: {
+        //   '/about': {
+        //     changefreq: 'monthly',
+        //     priority: 0.7
+        //   }
+        // }
+      }
+    }
   ]
 }
