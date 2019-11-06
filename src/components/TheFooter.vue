@@ -40,8 +40,14 @@
 export default {
   data() {
     return {
-      formData: {}
-    };
+      formData: {},
+      services: [
+        'User Experience',
+        'User Interface',
+        'Product Design',
+        'development'
+      ]
+    }
   },
   methods: {
     encode(data) {

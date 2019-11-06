@@ -15,7 +15,7 @@
                 path#Union_1(data-name='Union 1', d='M130.4,66.741,246.992,0,220.149,84.9,129.688,144ZM26.577,84.757,0,0,116.037,66.431v77.254Z', transform='translate(80.643 253.683)', fill='#fff')
 
           h1
-            span.text-lg.uppercase.font-semibold bracykner
+            span.text-lg.uppercase.font-semibold brayckner
             span.text-lg.uppercase.text-gray-500 media
 
         div.flex.justify-center
