@@ -14,8 +14,8 @@
                             input(name='bot-field')
 
                 label.text-lg.font-semibold(for="services") Tell us what you are interested in:
-                select#services.rounded-lg.h-16.w-full.shadow-lg.mt-2.bg-white.p-5(required)
-                    option(v-for="service in services" :value="service" :key="service" v-model="formData.service") {{ service }}
+                select#services.rounded-lg.h-16.w-full.shadow-lg.mt-2.bg-white.p-5(v-model="formData.service" required)
+                    option(v-for="service in services" :value="service" :key="service") {{ service }}
 
                 div.my-4
                     label.text-xl.font-semibold(for="name") Name:
@@ -34,7 +34,7 @@
                     textarea#what_can_we_do.mb-16.rounded-lg.h-40.w-full.shadow-lg.mt-2.p-5(v-model="formData.message" required)
 
                 div.flex.justify-center
-                    button.font-bold.text-xl.rounded-full.shadow-lg.w-48.h-12.bg-white Submit
+                    input.font-bold.text-xl.rounded-full.shadow-lg.w-48.h-12.bg-white(type="submit" value="Submit")
 </template>
 
 <script>
@@ -63,6 +63,7 @@
       },
       handleSubmit (e) {
         let formData = { ...this.formData }
+        console.log(formData)
         fetch('/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
