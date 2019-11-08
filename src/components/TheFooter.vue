@@ -6,8 +6,8 @@
         form.flex.justify-center.mt-32.mb-24(name='contact', method='post', v-on:submit.prevent='handleSubmit', action='/success/', data-netlify='true', data-netlify-honeypot='bot-field')
             div.flex.flex-col
 
-                input(type='hidden', name='form-name', value='contact')
-                p(hidden='')
+                input.hidden(type='hidden', name='form-name', value='contact')
+                p.hidden(hidden)
                     label
                         | Don&rsquo;t fill this out:
                         input(name='bot-field')
@@ -61,7 +61,7 @@
         ).join('&')
       },
       handleSubmit (e) {
-        let formData = this.form
+        let formData = this.formData
         fetch('/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
