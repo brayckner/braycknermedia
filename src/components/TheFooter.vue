@@ -68,7 +68,7 @@
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: this.encode({
             'form-name': e.target.getAttribute('name'),
-            formData
+            ...formData
           })
         }).then(() => this.$router.push('/success')).catch(error => alert(error))
       }
