@@ -12,4 +12,4 @@
 
 ## License
 
-MIT © 2019 Brayckner Torres
+All Rights Reserved © 2019 Brayckner Torres
