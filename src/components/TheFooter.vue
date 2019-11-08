@@ -6,11 +6,12 @@
         form.flex.justify-center.mt-32.mb-24(name='contact', method='post', v-on:submit.prevent='handleSubmit', action='/success/', data-netlify='true', data-netlify-honeypot='bot-field')
             div.flex.flex-col
 
-                input.hidden(type='hidden', name='form-name', value='contact')
-                p.hidden(hidden)
-                    label
-                        | Don&rsquo;t fill this out:
-                        input(name='bot-field')
+                div.hidden
+                    input.hidden(type='hidden', name='form-name', value='contact')
+                    p.hidden(hidden)
+                        label
+                            | Don&rsquo;t fill this out:
+                            input(name='bot-field')
 
                 label.text-lg.font-semibold(for="services") Tell us what you are interested in:
                 select#services.rounded-lg.h-16.w-full.shadow-lg.mt-2.bg-white.p-5(required)
@@ -61,7 +62,7 @@
         ).join('&')
       },
       handleSubmit (e) {
-        let formData = this.formData
+        let formData = { ...this.formData }
         fetch('/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
