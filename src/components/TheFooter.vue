@@ -40,7 +40,12 @@
   export default {
     data () {
       return {
-        formData: {},
+        formData: {
+          service: '',
+          company_name: '',
+          email: '',
+          message: ''
+        },
         services: [
           'User Experience',
           'User Interface',
@@ -56,12 +61,13 @@
         ).join('&')
       },
       handleSubmit (e) {
+        let formData = this.form
         fetch('/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: this.encode({
             'form-name': e.target.getAttribute('name'),
-            ...this.formData
+            formData
           })
         }).then(() => this.$router.push('/success')).catch(error => alert(error))
       }
