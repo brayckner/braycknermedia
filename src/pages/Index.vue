@@ -1,6 +1,6 @@
 <template lang="pug">
   layout
-    div.flex.flex-col.mb-56
+    div.flex.flex-col
       div.flex.justify-center
         p.text-xs.font-semibold.text-center
           span.block A FULL - SERVICE PRODUCT & DEVELOPMENT AGENCY

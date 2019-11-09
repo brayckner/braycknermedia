@@ -13,11 +13,11 @@
 
       div.fixed.top-0.right-0.z-20.pr-5.max-w-xs(v-show="isMenuOpen")
         div.bg-white.rounded-lg.shadow-lg
-          div.flex.justify-end.pt-5.pr-5.mb-10(@click="isMenuOpen = !isMenuOpen")
+          div.flex.justify-end.pt-5.pr-5.mb-5(@click="isMenuOpen = !isMenuOpen")
             svg(xmlns='http://www.w3.org/2000/svg', width='29.018', height='29.018', viewbox='0 0 29.018 29.018')
               path(d='M34.018,7.923,31.1,5,19.509,16.587,7.923,5,5,7.923,16.587,19.509,5,31.1l2.923,2.923L19.509,22.432,31.1,34.018,34.018,31.1,22.432,19.509Z', transform='translate(-5 -5)')
 
-          div.flex.flex-col.pl-5.pb-5.pr-16
+          div.flex.flex-col.pl-5.pb-5.pr-10
             a.font-medium.text-3xl.my-2.cursor-pointer(href="/#what_we_do" @click="isMenuOpen = !isMenuOpen") What We Do
             a.font-medium.text-3xl.my-2.cursor-pointer(href="/#who_we_are" @click="isMenuOpen = !isMenuOpen") Who We Are
             a.font-medium.text-3xl.my-2.cursor-pointer(href="/#product_design" @click="isMenuOpen = !isMenuOpen") Product Design

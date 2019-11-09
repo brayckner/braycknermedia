@@ -1,6 +1,9 @@
 module.exports = {
   siteName: 'Brayckner Media',
   siteUrl: 'https://braycknermedia.com',
+  templates: {
+    Blog: '/blog/:title'
+  },
   transformers: {
     remark: {
       externalLinksTarget: '_blank',
@@ -32,17 +35,16 @@ module.exports = {
       }
     },
     {
-      use: `gridsome-plugin-netlify-cms`,
+      use: 'gridsome-plugin-netlify-cms',
       options: {
-        publicPath: `/admin`
+        publicPath: '/admin'
       }
     },
     {
       use: '@gridsome/source-filesystem',
       options: {
         path: 'netlify/blog/**/*.md',
-        typeName: 'BlogPost',
-        route: '/blog/:slug'
+        typeName: 'Blog'
       }
     }
   ]

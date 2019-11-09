@@ -4,7 +4,7 @@
       the-navbar
     div.py-24
       slot
-    footer.absolute.bottom-0.w-full.h-32.z-0
+    footer.absolute.bottom-0.w-full.h-0.z-0
       the-footer
 </template>
 
