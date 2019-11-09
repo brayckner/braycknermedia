@@ -12,11 +12,11 @@
       div.flex.justify-center
         button.hidden.font-bold.text-xl.rounded-full.shadow-lg.w-48.h-16.bg-white Get Started
 
-    div#what_we_do.flex.flex-col.bg-brown-500.px-10
+    div#what_we_do.anchor.flex.flex-col.bg-brown-500.px-10
       div.flex.justify-center
         p.text-xl.font-semibold.text-white What We Do
         
-      div#product_design.flex.justify-center.my-20
+      div#product_design.anchor.flex.justify-center.my-20
         div.flex.flex-col
           p.text-xl.font-semibold.text-white Product Design
           g-image.mt-6( width='342' src="../assets/images/undraw_mobile_prototyping.png" immediate="true")
@@ -24,7 +24,7 @@
       div.flex.justify-center.mb-8
         button.hidden.font-bold.text-xl.rounded-full.shadow-lg.w-48.h-12.bg-white Get Started
 
-    div#development.flex.flex-col.bg-brown-500.px-10
+    div#development.anchor.flex.flex-col.bg-brown-500.px-10
       div.flex.justify-center.mb-20
         div.flex.flex-col
           p.text-xl.font-semibold.text-white Development
@@ -34,7 +34,7 @@
         button.hidden.font-bold.text-xl.rounded-full.shadow-lg.w-48.h-12.bg-white Get Started
 
 
-    div#who_we_are
+    div#who_we_are.anchor
       div.flex.justify-center.my-4
         p.text-xl Who we are
       div.flex.justify-center

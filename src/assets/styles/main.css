@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+	scroll-padding-top: 6rem;
+}
+
 html, body {
 	font-family: 'Montserrat', sans-serif;
 	margin: 0;
@@ -11,11 +15,8 @@ html, body {
 	scroll-behavior: smooth;
 }
 
-.fade-enter-active, .fade-leave-active {
-	transition: opacity .5s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-	opacity: 0;
+.anchor {
+	padding-top: 6rem;
 }
 
 .bg-brown-500 {

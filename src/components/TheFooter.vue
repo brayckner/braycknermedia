@@ -1,5 +1,5 @@
 <template lang="pug">
-    div#contact_us.flex.flex-col.bg-brown-500.px-10
+    div#contact_us.anchor.flex.flex-col.bg-brown-500.px-10
         div.flex.justify-center.mt-4
             p.text-sm.font-semibold.text-white Lets Connect
 

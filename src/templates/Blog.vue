@@ -60,7 +60,7 @@ export default {
 
 <style scoped>
     #content >>> img {
-        @apply m-auto;
+        @apply m-auto my-5;
     }
 
     #content >>> p {
