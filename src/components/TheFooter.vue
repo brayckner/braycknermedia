@@ -51,21 +51,34 @@
       }
     },
     methods: {
-      encode (data) {
-        return Object.keys(data).map(
-          key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
-        ).join('&')
-      },
-      handleSubmit (e) {
-        fetch('/', {
+      async handleSubmit (e) {
+        let formData = new FormData()
+
+        for (let [key, value] of Object.entries(this.formData)) {
+          formData.append(key, value)
+        }
+
+        await fetch('/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: this.encode({
-            'form-name': e.target.getAttribute('name'),
-            ...this.formData
-          })
-        }).then(() => this.$router.push('/success')).catch(error => alert(error))
+          body: formData
+        })
       }
+      // encode (data) {
+      //   return Object.keys(data).map(
+      //     key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+      //   ).join('&')
+      // },
+      // handleSubmit (e) {
+      //   fetch('/', {
+      //     method: 'POST',
+      //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      //     body: this.encode({
+      //       'form-name': e.target.getAttribute('name'),
+      //       ...this.formData
+      //     })
+      //   }).then(() => this.$router.push('/success')).catch(error => alert(error))
+      // }
     }
   }
 </script>
