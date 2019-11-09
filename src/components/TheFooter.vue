@@ -13,9 +13,9 @@
                             | Don&rsquo;t fill this out:
                             input(name='bot-field')
 
-                label.text-lg.font-semibold(for="services") Tell us what you are interested in:
-                select.rounded-lg.h-16.w-full.shadow-lg.mt-2.bg-white.p-5(id="services" name="services" v-model="formData.service" required)
-                    option(v-for="service in services" :value="service.value" :key="service.value") {{ service.name }}
+                label.text-lg.font-semibold(for="offered") Tell us what you are interested in:
+                select.rounded-lg.h-16.w-full.shadow-lg.mt-2.bg-white.p-5(id="offered" name="offered" v-model="formData.service" required)
+                    option(v-for="service in services" v-bind:value="service.value" v-bind:key="service.value") {{ service.text }}
 
                 div.my-4
                     label.text-xl.font-semibold(for="name") Name:
@@ -30,8 +30,8 @@
                     input.rounded-lg.h-16.w-full.shadow-lg.mt-2.p-5(id="email" name="email" type="email" v-model="formData.email" required)
 
                 div.my-4
-                    label.text-xl.font-semibold(for="what_can_we_do") What can we do for you?
-                    textarea.mb-16.rounded-lg.h-40.w-full.shadow-lg.mt-2.p-5(id="what_can_we_do" name="what_can_we_do" v-model="formData.message" required)
+                    label.text-xl.font-semibold(for="message") What can we do for you?
+                    textarea.mb-16.rounded-lg.h-40.w-full.shadow-lg.mt-2.p-5(id="message" name="message" v-model="formData.message" required)
 
                 div.flex.justify-center
                     button.font-bold.text-xl.rounded-full.shadow-lg.w-48.h-12.bg-white(type="submit") Submit
@@ -43,43 +43,31 @@
       return {
         formData: {},
         services: [
-          { name: 'User Experience', value: 'user_experiecne' },
-          { name: 'User Interface', value: 'user_interface' },
-          { name: 'Product Design', value: 'product_design' },
-          { name: 'Development', value: 'development' }
+          { text: 'User Experience', value: 'user_experience'},
+          { text: 'User Interface', value: 'user_interface' },
+          { text: 'Product Design', value: 'product_design' },
+          { text: 'Development', value: 'development' }
         ]
       }
     },
     methods: {
       async handleSubmit (e) {
         let data = new URLSearchParams()
-
         data.append('form-name', e.target.getAttribute('name'))
         for (let [key, value] of Object.entries(this.formData)) {
           data.append(key, value)
         }
-
-        await fetch('/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: data
-        })
+        try {
+          await fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: data
+          })
+          this.$router.push('/success')
+        } catch (error) {
+          alert(error)
+        }
       }
-      // encode (data) {
-      //   return Object.keys(data).map(
-      //     key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
-      //   ).join('&')
-      // },
-      // handleSubmit (e) {
-      //   fetch('/', {
-      //     method: 'POST',
-      //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      //     body: this.encode({
-      //       'form-name': e.target.getAttribute('name'),
-      //       ...this.formData
-      //     })
-      //   }).then(() => this.$router.push('/success')).catch(error => alert(error))
-      // }
     }
   }
 </script>
