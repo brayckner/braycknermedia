@@ -52,16 +52,15 @@
     },
     methods: {
       async handleSubmit (e) {
-        let formData = new FormData()
-
-        for (let [key, value] of Object.entries(this.formData)) {
-          formData.append(key, value)
-        }
+         const body = new URLSearchParams(new FormData({
+           'form-name': e.target.getAttribute('name'),
+           ...this.formData
+         }))
 
         await fetch('/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: formData
+          body
         })
       }
       // encode (data) {
