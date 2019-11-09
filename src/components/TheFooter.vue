@@ -14,7 +14,7 @@
                             input(name='bot-field')
 
                 label.text-lg.font-semibold(for="offered") Tell us what you are interested in:
-                select.rounded-lg.h-16.w-full.shadow-lg.mt-2.bg-white.p-5(id="offered" name="offered" v-model="formData.service" required)
+                select.rounded-lg.h-16.w-full.shadow-lg.mt-2.bg-white.p-5(id="offered" name="offered" v-model="formData.offered" required)
                     option(v-for="service in services" v-bind:value="service.value" v-bind:key="service.value") {{ service.text }}
 
                 div.my-4
