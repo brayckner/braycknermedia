@@ -6,32 +6,31 @@
         form.flex.justify-center.mt-32.mb-24(name='contact', method='post', v-on:submit.prevent='handleSubmit', action='/success/', data-netlify='true', data-netlify-honeypot='bot-field')
             div.flex.flex-col
 
-                div.hidden
-                    input.hidden(type='hidden', name='form-name', value='contact')
-                    p.hidden(hidden)
-                        label
-                            | Don&rsquo;t fill this out:
-                            input(name='bot-field')
+                input.hidden(type='hidden', name='form-name', value='contact')
+                p.hidden(hidden)
+                    label
+                        | Don&rsquo;t fill this out:
+                        input(name='bot-field')
 
                 label.text-lg.font-semibold(for="services") Tell us what you are interested in:
-                select#services.rounded-lg.h-16.w-full.shadow-lg.mt-2.bg-white.p-5(v-model="formData.service" required)
-                    option(v-for="service in services" :value="service" :key="service") {{ service }}
+                select.rounded-lg.h-16.w-full.shadow-lg.mt-2.bg-white.p-5(id="services" name="services" v-model="formData.service" required)
+                    option(v-for="service in services" :value="service.value" :key="service.value") {{ service.name }}
 
                 div.my-4
                     label.text-xl.font-semibold(for="name") Name:
-                    input#name.rounded-lg.h-16.w-full.shadow-lg.mt-2.p-5(type="text" v-model="formData.name" required)
+                    input.rounded-lg.h-16.w-full.shadow-lg.mt-2.p-5(id="name" name="name" type="text" v-model="formData.name" required)
 
                 div.my-4
                     label.text-xl.font-semibold(for="company_name") Company Name:
-                    input#company_name.rounded-lg.h-16.w-full.shadow-lg.mt-2.p-5(type="text" v-model="formData.company_name" required)
+                    input.rounded-lg.h-16.w-full.shadow-lg.mt-2.p-5(id="company_name" name="company_name" type="text" v-model="formData.company_name" required)
 
                 div.my-4
                     label.text-xl.font-semibold(for="email") Email:
-                    input#email.rounded-lg.h-16.w-full.shadow-lg.mt-2.p-5(type="email" v-model="formData.email" required)
+                    input.rounded-lg.h-16.w-full.shadow-lg.mt-2.p-5(id="email" name="email" type="email" v-model="formData.email" required)
 
                 div.my-4
                     label.text-xl.font-semibold(for="what_can_we_do") What can we do for you?
-                    textarea#what_can_we_do.mb-16.rounded-lg.h-40.w-full.shadow-lg.mt-2.p-5(v-model="formData.message" required)
+                    textarea.mb-16.rounded-lg.h-40.w-full.shadow-lg.mt-2.p-5(id="what_can_we_do" name="what_can_we_do" v-model="formData.message" required)
 
                 div.flex.justify-center
                     button.font-bold.text-xl.rounded-full.shadow-lg.w-48.h-12.bg-white(type="submit") Submit
@@ -43,10 +42,10 @@
       return {
         formData: {},
         services: [
-          'User Experience',
-          'User Interface',
-          'Product Design',
-          'Development'
+          { name: 'User Experience', value: 'user_experiecne' },
+          { name: 'User Interface', value: 'user_interface' },
+          { name: 'Product Design', value: 'product_design' },
+          { name: 'Development', value: 'development' }
         ]
       }
     },
