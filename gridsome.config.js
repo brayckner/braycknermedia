@@ -1,6 +1,16 @@
 module.exports = {
   siteName: 'Brayckner Media',
   siteUrl: 'https://braycknermedia.com',
+  transformers: {
+    remark: {
+      externalLinksTarget: '_blank',
+      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+      anchorClassName: 'icon icon-link',
+      plugins: [
+        '@gridsome/remark-prismjs'
+      ]
+    }
+  },
   plugins: [
     { use: 'gridsome-plugin-pug' },
     { use: 'gridsome-plugin-tailwindcss' },
@@ -22,6 +32,20 @@ module.exports = {
         //     priority: 0.7
         //   }
         // }
+      }
+    },
+    {
+      use: `gridsome-plugin-netlify-cms`,
+      options: {
+        publicPath: `/admin`
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'netlify/blog/**/*.md',
+        typeName: 'BlogPost',
+        route: '/blog/:slug'
       }
     }
   ]
