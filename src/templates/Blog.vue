@@ -1,19 +1,20 @@
 <template lang="pug">
     layout
       div.max-w-3xl.mx-auto
-        h1.text-3xl.font-bold.capitalize.text-gray-800 {{ $page.blog.title }}
-        p.text-lg.text-gray-700.capitalize {{ $page.blog.sub_title }}
+        div.mx-5(class="md:mx-0")
+          h1.text-3xl.font-bold.capitalize.text-gray-800 {{ $page.blog.title }}
+          p.text-lg.text-gray-700.capitalize {{ $page.blog.sub_title }}
 
-        div
-          p.text-lg.text-gray-500.capitalize {{ $page.blog.author }}
-          div.flex.justify-between
-            p.text-lg.text-gray-400 {{ $page.blog.timeToRead }} min read
-            p.text-lg.text-gray-400 {{ $page.blog.date | diffForHumans }}
+          div
+            p.text-lg.text-gray-500.capitalize {{ $page.blog.author }}
+            div.flex.justify-between
+              p.text-lg.text-gray-400 {{ $page.blog.timeToRead }} min read
+              p.text-lg.text-gray-400 {{ $page.blog.date | diffForHumans }}
 
-        div.border-t-2.my-1
+          div.border-t-2.my-1
 
-        div.flex.justify-center
-          vue-markdown#content {{ $page.blog.content }}
+          div.flex.justify-center
+            vue-markdown#content {{ $page.blog.content }}
 </template>
 
 <page-query>

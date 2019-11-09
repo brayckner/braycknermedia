@@ -7,7 +7,7 @@
           span.block BUILT TO FULFILL THE NEEDS OF MODERN BUSINESSES
 
       div.flex.justify-center.mt-20.mb-24
-        g-image(width='341.856' src="../assets/images/undraw_modern_professional.png" immediate="true")
+        g-image(width='341.856' src="../assets/svgs/undraw_modern_professional.svg" immediate="true")
 
       div.flex.justify-center
         button.hidden.font-bold.text-xl.rounded-full.shadow-lg.w-48.h-16.bg-white Get Started
@@ -19,7 +19,7 @@
       div#product_design.anchor.flex.justify-center.my-20
         div.flex.flex-col
           p.text-xl.font-semibold.text-white Product Design
-          g-image.mt-6( width='342' src="../assets/images/undraw_mobile_prototyping.png" immediate="true")
+          g-image.mt-6( width='342' src="../assets/svgs/undraw_mobile_prototyping.svg" immediate="true")
 
       div.flex.justify-center.mb-8
         button.hidden.font-bold.text-xl.rounded-full.shadow-lg.w-48.h-12.bg-white Get Started
@@ -28,7 +28,7 @@
       div.flex.justify-center.mb-20
         div.flex.flex-col
           p.text-xl.font-semibold.text-white Development
-          g-image.mt-10(width='342' src="../assets/images/undraw_programming.png" immediate="true")
+          g-image.mt-10(width='342' src="../assets/svgs/undraw_programming.svg" immediate="true")
 
       div.flex.justify-center.mb-16
         button.hidden.font-bold.text-xl.rounded-full.shadow-lg.w-48.h-12.bg-white Get Started
