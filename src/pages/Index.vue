@@ -10,7 +10,7 @@
         g-image(width='341.856' src="../assets/images/undraw_modern_professional.png" immediate="true")
 
       div.flex.justify-center
-        button.font-bold.text-xl.rounded-full.shadow-lg.w-48.h-16.bg-white Get Started
+        button.hidden.font-bold.text-xl.rounded-full.shadow-lg.w-48.h-16.bg-white Get Started
 
     div#what_we_do.flex.flex-col.bg-brown-500.px-10
       div.flex.justify-center
@@ -22,7 +22,7 @@
           g-image.mt-6( width='342' src="../assets/images/undraw_mobile_prototyping.png" immediate="true")
 
       div.flex.justify-center.mb-8
-        button.font-bold.text-xl.rounded-full.shadow-lg.w-48.h-12.bg-white Get Started
+        button.hidden.font-bold.text-xl.rounded-full.shadow-lg.w-48.h-12.bg-white Get Started
 
     div#development.flex.flex-col.bg-brown-500.px-10
       div.flex.justify-center.mb-20
@@ -31,7 +31,7 @@
           g-image.mt-10(width='342' src="../assets/images/undraw_programming.png" immediate="true")
 
       div.flex.justify-center.mb-16
-        button.font-bold.text-xl.rounded-full.shadow-lg.w-48.h-12.bg-white Get Started
+        button.hidden.font-bold.text-xl.rounded-full.shadow-lg.w-48.h-12.bg-white Get Started
 
 
     div#who_we_are
