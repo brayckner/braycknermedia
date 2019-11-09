@@ -34,19 +34,14 @@
                     textarea#what_can_we_do.mb-16.rounded-lg.h-40.w-full.shadow-lg.mt-2.p-5(v-model="formData.message" required)
 
                 div.flex.justify-center
-                    input.font-bold.text-xl.rounded-full.shadow-lg.w-48.h-12.bg-white(type="submit" value="Submit")
+                    button.font-bold.text-xl.rounded-full.shadow-lg.w-48.h-12.bg-white(type="submit") Submit
 </template>
 
 <script>
   export default {
     data () {
       return {
-        formData: {
-          service: '',
-          company_name: '',
-          email: '',
-          message: ''
-        },
+        formData: {},
         services: [
           'User Experience',
           'User Interface',
@@ -62,14 +57,13 @@
         ).join('&')
       },
       handleSubmit (e) {
-        let formData = { ...this.formData }
         console.log(formData)
         fetch('/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: this.encode({
             'form-name': e.target.getAttribute('name'),
-            ...formData
+            ...this.formData
           })
         }).then(() => this.$router.push('/success')).catch(error => alert(error))
       }
