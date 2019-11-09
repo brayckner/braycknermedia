@@ -1,5 +1,6 @@
 ---
 title: Sample Title
+sub_title: Sample sub title
 author: Carlos Rincon
 date: 2019-11-09T08:16:05.651Z
 ---
