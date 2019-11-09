@@ -54,6 +54,7 @@
       async handleSubmit (e) {
         let data = new URLSearchParams()
 
+        data.append('form-name', e.target.getAttribute('name'))
         for (let [key, value] of Object.entries(this.formData)) {
           data.append(key, value)
         }
