@@ -3,9 +3,7 @@
     div.flex.justify-between
       div.flex.flex-col
         g-link(to="/")
-            g-image.w-64(src="../assets/images/logo.png" immediate="true")
-        div.flex.justify-center
-          g-image.w-20.h-4(src="../assets/images/below_logo.png" immediate="true")
+            g-image(class="w-48 md:64" src="../assets/images/logo.png" immediate="true")
 
       div.cursor-pointer(@click="isMenuOpen = !isMenuOpen")
         svg.h-8.w-8(xmlns='http://www.w3.org/2000/svg', width='41', height='24.6', viewbox='0 0 41 24.6')
@@ -27,18 +25,10 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       isMenuOpen: false
-    }
-  },
-  methods: {
-    // enter (el, done) {
-    //   el.velocity({
-    //     opacity: 0
-    //   })
-    // }
+    };
   }
-}
-
+};
 </script>

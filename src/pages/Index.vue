@@ -13,8 +13,11 @@
         button.hidden.font-bold.text-xl.rounded-full.shadow-lg.w-48.h-16.bg-white Get Started
 
     div#what_we_do.anchor.flex.flex-col.bg-brown-500.px-10
-      div.flex.justify-center
+      div.flex.justify-center.mx-auto
         p.text-xl.font-semibold.text-white What We Do
+
+      div.flex.justify-center.max-w-lg.text-center.mx-auto.mt-5
+        p.text-md.text-black Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         
       div#product_design.anchor.flex.justify-center.my-20
         div.flex.flex-col
