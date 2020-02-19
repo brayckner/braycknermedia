@@ -1,6 +1,6 @@
 module.exports = {
-  siteName: 'Brayckner Media',
-  siteUrl: 'https://braycknermedia.com',
+  siteName: 'Instinct R/D',
+  siteUrl: 'https://instinctrd.com',
   templates: {
     Blog: '/blog/:title'
   },
